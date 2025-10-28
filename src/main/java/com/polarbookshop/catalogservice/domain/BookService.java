@@ -10,7 +10,7 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public Iterable<Book> viewAllBooks() {
+    public Iterable<Book> viewBookList() {
         return bookRepository.findAll();
     }
 
@@ -26,8 +26,8 @@ public class BookService {
         return bookRepository.save(book);
     }
 
-    public void removeBookFromCatalog(Book book) {
-        bookRepository.deleteByIsbn(book.isbn());
+    public void removeBookFromCatalog(String isbn) {
+        bookRepository.deleteByIsbn(isbn);
     }
 
     public Book editBookDetails(String isbn, Book book) {
