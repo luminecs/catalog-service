@@ -55,6 +55,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <systemPropertyVariables>
+                        <spring.profiles.active>testdata</spring.profiles.active>
+                    </systemPropertyVariables>
+                </configuration>
             </plugin>
         </plugins>
     </build>
