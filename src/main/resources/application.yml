@@ -24,5 +24,12 @@ server:
       max: 200
       min-spare: 10
 
+management:
+  endpoints:
+    web:
+      exposure:
+        # /actuator/refresh
+        include: refresh
+
 polar:
   greeting: Welcome to the local book catalog!
